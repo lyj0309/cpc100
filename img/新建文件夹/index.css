@@ -1,0 +1,92 @@
+.title {
+    color: white;
+    font-size: 80px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #d3a2e4 , 0 0 70px  #d3a2e4 , 0 0 80px #d3a2e4 , 0 0 100px #d3a2e4 , 0 0 150px #d3a2e4 ;
+}
+
+.title#fire {
+    text-align: center;
+    margin: 200px auto;
+    font-family: "League-Gothic", Courier;
+    font-size: 200px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+}
+.FAQTitle {
+    font-size: 1.4em;
+    font-weight: 500;
+    /* width: 84%; */
+    padding: 40px 8%;
+    box-shadow: 0 1px 0 0 #ccc;
+}
+
+.FAQWrap {
+    max-width: 1200px;
+    transition: 0.33s ease;
+    min-height: 250px;
+    line-height: 250px;
+    /* border-bottom: 1px solid #aaa; */
+    box-shadow: 0 1px 0 0 #ccc;
+    overflow: hidden;
+}
+
+.listOn {
+    height: 700px;
+}
+
+.listOff {
+    height: 250px;
+}
+
+::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+.url {
+    color: #3EA3D8;
+}
+
+.FAQTextParagraph {
+    padding-top: 20px;
+    margin: 0 auto;
+    color: white;
+    line-height: 2rem;
+    width: 84%;
+    text-shadow: 0px 0px 2px black;
+    font-size: 1.3rem;
+    z-index: 999;
+}
+
+.FAQTextLine {
+    position: relative;
+    z-index: 999;
+    display: inline;
+}
+
+.listTitle {
+    position: relative;
+    z-index: 999;
+    color: white;
+    font-size: 3rem;
+    text-shadow: 0 0 10px black;
+    font-weight: 400;
+    text-align: center;
+}
+
+.bgImg {
+
+    position: fixed;
+    width: 100%;
+    z-index: -9;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./img/gq.jpg);
+    background-size: 50%;
+}
