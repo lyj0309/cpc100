@@ -6,17 +6,37 @@
     box-shadow: 0 1px 0 0 #ccc;
 }
 
+.title {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    font-size: 80px;
+    text-shadow: 0 0 10px #ccc, 0 0 10px #ccc, 0 0 20px #ccc, 0 0 30px #d3a2e4 , 0 0 50px  #d3a2e4 , 0 0 70px #d3a2e4 , 0 0 80px #d3a2e4 , 0 0 150px #d3a2e4 ;
+}
+
+.title#fire {
+    text-align: center;
+    margin: 200px auto;
+    font-family: "League-Gothic", Courier, serif;
+    font-size: 200px;
+    text-transform: uppercase;
+    color: #ccc;
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+}
+
 .FAQWrap {
+
     max-width: 1200px;
-    transition: 0.33s ease;
+    transition:all 0.33s ease;
     min-height: 300px;
     line-height: 300px;
-    /* border-bottom: 1px solid #aaa; */
-    box-shadow: 0 1px 0 0 #ccc;
+     border-bottom: 1px solid #aaa;
     overflow: hidden;
 }
 
 .listOn {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     height: 700px;
 }
 
@@ -39,7 +59,7 @@
     color: white;
     line-height: 2rem;
     width: 84%;
-    text-shadow: 0px 0px 2px black;
+    text-shadow: 0 0 2px black;
     font-size: 1.3rem;
     z-index: 999;
 }
@@ -67,43 +87,33 @@
 }
 
 .bgImg {
-
     position: fixed;
     width: 100%;
     z-index: -9;
 }
 
 body {
+
     margin: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: url(./img/gq.jpg);
+    background-image: url(./img/bg.svg);
+    background-color: red;
     background-size: 50%;
 }
 
+
+
 .listImg{
-    width: 1200px;
+    max-width: 1200px;
     height: 700px;
+}
+.littleTitle{
+    font-size: 1.1em;
+}
+.time{
+    font-size: .6em;
     position: relative;
-    padding:1px;
-    box-sizing:border-box;
-    z-index:1;
+    top: 10px;
 }
-.listImg:after{
-    content: "";
-    width:100%;
-    height:100%;
-    position: absolute;
-    left:0;
-    top:0;
-    background: inherit;
-    z-index: 2;
-    transition:all 0.3s ease
-}
-.listImgOn:after{
-    -webkit-filter:blur(8px) ;
-    filter: blur(8px);
-}
-
-
