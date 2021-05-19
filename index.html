@@ -12,19 +12,27 @@
 <div class="title">奋斗百年路 启航新征程</div>
 
 <div id="app">
-    <div
-            :style="['background-image: url(http://cdn.2333.pub/cpc100/'+(index+1)+'.png)']"
-            class="FAQWrap" v-for="(item,index) in list"
-            @click="tap(index)">
-        <div style="transition: 0.3s" :class="[focusIndex === index?'listOn':'listOff']">
-            <div class="listTitle">
-                <div class="littleTitle"> {{ item.title[1] }}</div>
-                <div class="time"> {{ item.title[0] }}</div>
+
+    <div class="FAQWrap" :class="[focusIndex === index?'listOn':'listOff']" v-for="(item,index) in list"
+         @click="tap(index)">
+        <div style=";height: 0;width: 0">
+            <div
+                    class="listImg"
+                    :class="[focusIndex !== index?'listImgOff':'listImgOn']"
+                    :style="['background: url(http://cdn.2333.pub/cpc100/'+(index+1)+'.png) no-repeat; ']"
+            >
+                <!--                <img class="listImg" style="position: relative;z-index: 0;transition: 0.3s ease;"
+                                     :style="[focusIndex === index?';top: 0':'top: -120px']"
+                                     :src="'http://cdn.2333.pub/cpc100/'+(index+1)+'.png'" alt="">-->
             </div>
-            <div class="FAQTextParagraph" v-for="d in item.data">
-                <div class="FAQTextLine">
-                    　　{{ d }}
-                </div>
+        </div>
+        <div class="listTitle">
+            <div class="littleTitle"> {{ item.title[1] }}</div>
+            <div class="time"> {{ item.title[0] }}</div>
+        </div>
+        <div class="FAQTextParagraph" v-for="d in item.data">
+            <div class="FAQTextLine">
+                {{ d }}
             </div>
         </div>
     </div>
@@ -172,11 +180,8 @@
                         title: ["1921-2021", "中国共产党成立100周年"],
                         data: [`2021年7月1日是中国共产党成立100周年纪念日。`],
                     }
-                ].map((v)=>{
-                    v.data = v.data.map((v)=>""+v.replace(/\s/g,""))
-                    return v;
-                }),
-                focusIndex: 0
+                ],
+                focusIndex: -1
             }
         },
         methods: {
