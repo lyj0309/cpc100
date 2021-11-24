@@ -5,12 +5,13 @@
     padding: 40px 8%;
     box-shadow: 0 1px 0 0 #ccc;
 }
+
 .title {
     padding-top: 50px;
     padding-bottom: 50px;
     color: white;
     font-size: 80px;
-    text-shadow: 0 0 10px #ccc, 0 0 10px #ccc, 0 0 20px #ccc, 0 0 30px #d3a2e4 , 0 0 50px  #d3a2e4 , 0 0 70px #d3a2e4 , 0 0 80px #d3a2e4 , 0 0 150px #d3a2e4 ;
+    text-shadow: 0 0 10px #ccc, 0 0 10px #ccc, 0 0 20px #ccc, 0 0 30px #d3a2e4, 0 0 50px #d3a2e4, 0 0 70px #d3a2e4, 0 0 80px #d3a2e4, 0 0 150px #d3a2e4;
 }
 
 .title#fire {
@@ -99,35 +100,35 @@ body {
     background-size: 50%;
 }
 
-.listImg{
+.imgDD{
+    position: relative;
     width: 1200px;
     height: 700px;
+    overflow: hidden;
+}
+
+.listImg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    zoom: 1.3;
     position: relative;
-    padding:1px;
-    box-sizing:border-box;
-    z-index:1;
+    z-index: 0;
+    transition: 0.3s ease;
 }
 
-.listImg:after{
-    content: "";
-    width:100%;
-    height:100%;
-    position: absolute;
-    left:0;
-    top:0;
-    background: inherit;
-    z-index: 2;
-    transition:all 0.3s ease
-}
-.listImgOn:after{
-    -webkit-filter:blur(8px) ;
+
+.listImgOn {
     filter: blur(8px);
+    -webkit-filter: blur(8px);
 }
 
-.littleTitle{
+
+.littleTitle {
     font-size: 1.1em;
 }
-.time{
+
+.time {
     font-size: .6em;
     position: relative;
     top: 10px;

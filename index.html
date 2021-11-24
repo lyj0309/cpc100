@@ -12,18 +12,16 @@
 <div class="title">奋斗百年路 启航新征程</div>
 
 <div id="app">
-
+    <div style="text-align: right;font-size: 1.5rem;margin-bottom: 1rem">
+        designed by 梁研骏@dlpu
+    </div>
     <div class="FAQWrap" :class="[focusIndex === index?'listOn':'listOff']" v-for="(item,index) in list"
          @click="tap(index)">
         <div style=";height: 0;width: 0">
-            <div
-                    class="listImg"
-                    :class="[focusIndex !== index?'listImgOff':'listImgOn']"
-                    :style="['background: url(http://cdn.2333.pub/cpc100/'+(index+1)+'.png) no-repeat; ']"
-            >
-                <!--                <img class="listImg" style="position: relative;z-index: 0;transition: 0.3s ease;"
-                                     :style="[focusIndex === index?';top: 0':'top: -120px']"
-                                     :src="'http://cdn.2333.pub/cpc100/'+(index+1)+'.png'" alt="">-->
+            <div class="imgDD">
+                <img class="listImg"
+                     :class="[focusIndex !== index?'listImgOff':'listImgOn']"
+                     :src="'http://cdn.2333.pub/cpc100/'+(index+1)+'.png'" alt="">
             </div>
         </div>
         <div class="listTitle">
@@ -36,11 +34,10 @@
             </div>
         </div>
     </div>
-    <div style="text-align: right;">
-        design by 梁研骏
-    </div>
+
 </div>
 <script>
+    let a = "asdfsdaf"
     const app = {
         data() {
             return {
@@ -181,7 +178,7 @@
                         data: [`2021年7月1日是中国共产党成立100周年纪念日。`],
                     }
                 ],
-                focusIndex: -1
+                focusIndex: 0
             }
         },
         methods: {
